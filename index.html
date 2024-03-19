@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- actually third -->
+  <title>My first webpage</title>
+  <link rel="icon" href="coding.svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;700;900&display=swap');
+
+    html, body, table {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.05rem;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      --bg-color: #202124;
+      color: #ebebeb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      transition: opacity 3s;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    #school_logo {
+      height: 70px;
+      width: 70px;
+      object-fit: contain;
+    }
+
+    #intro {
+      z-index: 1;
+    }
+
+    #background {
+      z-index: 0;
+    }
+
+    #container {
+      background-color: #20212455;
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      height: 3in;
+      width: 4in;
+      border-radius: 30px;
+    }
+
+    #container > * {
+      margin-bottom: 20px;
+    }
+
+    .inline {
+      display: flex;
+      align-items: center;
+    }
+
+    table > tbody > tr > th {
+      text-align: left;
+      font-weight: normal;
+      padding-right: 15px;
+    }
+  </style>
+  <script defer>
+    setTimeout(() => {
+      intro.style.opacity = 0;
+      setTimeout(() => intro.style.display = 'none', 3000);
+    }, 250);
+  </script>
+</head>
+
+<body>
+  <video id="intro" src="boom.mp4" muted autoplay></video>
+  <video id="background" src="background.mp4" muted autoplay loop></video>
+  <div id="container">
+    <div class="inline">
+      <a href="https://makopan.edu.hk" target="_blank">
+        <img id="school_logo" src="schoolLogo01.png">
+      </a>
+      <p style="text-align: center;">Stewards Ma Kam Ming Charitable Foundation Ma Ko Pan Memorial College</p>
+    </div>
+    <table>
+      <tr>
+        <th>Name:</th>
+        <th><u>Jeffrey</u></th>
+      </tr>
+      <tr>
+        <th>Class:</th>
+        <th><u>5D</u></th>
+      </tr>
+      <tr>
+        <th>Class No:</th>
+        <th><u>17</u></th>
+      </tr>
+    </table>
+
+    <div class="inline">
+      <p style="padding-right: 20px;">My interest: </p>
+      <a href="https://github.com/supechicken" target="_blank">
+        <img src="coding.svg" height="50" width="50">
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
